@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Hello_Word_WPF"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Hello Word" Height="450" Width="800">
     <Grid>
         <Label Content="Primeiro contato com  WPF" Margin="156,30,134,296" RenderTransformOrigin="0.5,0.5" TextBlock.FontSize="39" TextBlock.TextAlignment="Center">
             <Label.RenderTransform>
