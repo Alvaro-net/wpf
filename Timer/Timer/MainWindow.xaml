@@ -1,0 +1,20 @@
+﻿<Window x:Class="Timer.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Timer"
+        mc:Ignorable="d"
+        Title="Timer" Height="450" Width="800">
+    <Grid>
+
+        <Label Content="Timer" HorizontalAlignment="Center" Margin="0,49,0,0" VerticalAlignment="Top" Height="75" Width="288" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="48"/>
+
+        <Label x:Name="lblTimer" Content="00:00:00" HorizontalAlignment="Center" VerticalAlignment="Center" Width="779" Height="95" FontSize="72" FontWeight="Medium" FontStyle="Normal" Background="{x:Null}" FontFamily="Arial Narrow" FontStretch="SemiCondensed" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+
+        <Button x:Name="startbtn" Content="Start" HorizontalAlignment="Left" Margin="110,356,0,0" VerticalAlignment="Top" Click="startbtn_Click" Width="120" Height="40" FontSize="20"/>
+        <Button x:Name="stopbtn" Content="Stop" HorizontalAlignment="Center" Margin="0,357,0,0" VerticalAlignment="Top" Click="stopbtn_Click" Height="40" Width="120" FontSize="20"/>
+        <Button x:Name="resetbtn" Content="Reset" Margin="0,356,133,0" VerticalAlignment="Top" Click="resetbtn_Click"  Height="40" Width="120" FontSize="20" HorizontalAlignment="Right" />
+
+    </Grid>
+</Window>
