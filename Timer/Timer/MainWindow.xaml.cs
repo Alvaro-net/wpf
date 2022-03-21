@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Diagnostics;
 using System.Linq;
 using System.Text;
@@ -32,7 +33,6 @@ namespace Timer
             DispatcherTimer timer = new DispatcherTimer();
             dt.Tick += new EventHandler(dt_Tick);
             dt.Interval = new TimeSpan(0, 0, 0, 0, 1);
-            stopbtn.IsEnabled = false;
             resetbtn.IsEnabled = false;
         }
 
@@ -56,32 +56,30 @@ namespace Timer
 
         private void startbtn_Click(object sender, RoutedEventArgs e)
         {
-            sw.Start();
-            dt.Start();
-            startbtn.IsEnabled = false;
-            stopbtn.IsEnabled = true;
-            resetbtn.IsEnabled = true;
-        }
-
-        private void stopbtn_Click(object sender, RoutedEventArgs e)
-        {
+            
             if (sw.IsRunning)
             {
                 sw.Stop();
                 startbtn.IsEnabled = true;
-                stopbtn.IsEnabled = false;
-                //resetbtn.IsEnabled = false;
+                startbtnpath.Data = Geometry.Parse("M8,5.14V19.14L19,12.14L8,5.14Z");
             }
-
+            else 
+            {
+                startbtnpath.Data = Geometry.Parse("M18,18H6V6H18V18Z");
+                sw.Start();
+                dt.Start();
+                resetbtn.IsEnabled = true;
+            }
         }
+
 
         private void resetbtn_Click(object sender, RoutedEventArgs e)
         {
             sw.Reset();
             lblTimer.Content = "00:00:00.000";
             startbtn.IsEnabled = true;
-            stopbtn.IsEnabled = false;
             resetbtn.IsEnabled = false;
         }
+
     }
 }
