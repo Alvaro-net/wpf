@@ -5,16 +5,37 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Timer"
         mc:Ignorable="d"
-        Title="Timer" Height="450" Width="800">
-    <Grid>
+        Title="Timer" Height="448" Width="774">
+    <Grid Margin="5,5,10,-6" ScrollViewer.VerticalScrollBarVisibility="Visible">
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition />
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition />
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Label Content="Timer" HorizontalAlignment="Center" VerticalAlignment="Center" Height="124" Width="239" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="72" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="4" Grid.RowSpan="1"/>
 
-        <Label Content="Timer" HorizontalAlignment="Center" Margin="0,49,0,0" VerticalAlignment="Top" Height="75" Width="288" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="48"/>
+        <Label x:Name="lblTimer" Content="00:00:000" HorizontalAlignment="Center" Width="730" Height="175" FontSize="72" FontWeight="Bold" FontStyle="Normal" Background="{x:Null}" FontFamily="Arial Narrow" FontStretch="SemiCondensed" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="4" Grid.RowSpan="1" VerticalAlignment="Center"/>
+        <Button x:Name="startbtn" Margin="5" Click="startbtn_Click" Height="40" Width="120" FontSize="20" Grid.Column="0" Grid.Row="3" Grid.RowSpan="2" Grid.ColumnSpan="2">
+            <Button.Content>
+                <Canvas Width="24" Height="24">
+                    <Path x:Name="startbtnpath" Fill="Black" Data="M8,5.14V19.14L19,12.14L8,5.14Z" />
+                </Canvas>
+            </Button.Content>
+        </Button>
+        <Button x:Name="resetbtn" Margin="5" Click="resetbtn_Click"  Height="40" Width="120" FontSize="20" Grid.Column="2" Grid.Row="3" Grid.RowSpan="2" Grid.ColumnSpan="2">
+            <Button.Content>
+                <Canvas Width="21" Height="21" HorizontalAlignment="Center" VerticalAlignment="Center">
+                    <Path Fill="Black" Data="M12,4C14.1,4 16.1,4.8 17.6,6.3C20.7,9.4 20.7,14.5 17.6,17.6C15.8,19.5 13.3,20.2 10.9,19.9L11.4,17.9C13.1,18.1 14.9,17.5 16.2,16.2C18.5,13.9 18.5,10.1 16.2,7.7C15.1,6.6 13.5,6 12,6V10.6L7,5.6L12,0.6V4M6.3,17.6C3.7,15 3.3,11 5.1,7.9L6.6,9.4C5.5,11.6 5.9,14.4 7.8,16.2C8.3,16.7 8.9,17.1 9.6,17.4L9,19.4C8,19 7.1,18.4 6.3,17.6Z" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                </Canvas>
+            </Button.Content>
+        </Button>
 
-        <Label x:Name="lblTimer" Content="00:00:00" HorizontalAlignment="Center" VerticalAlignment="Center" Width="779" Height="95" FontSize="72" FontWeight="Medium" FontStyle="Normal" Background="{x:Null}" FontFamily="Arial Narrow" FontStretch="SemiCondensed" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
-
-        <Button x:Name="startbtn" Content="Start" HorizontalAlignment="Left" Margin="110,356,0,0" VerticalAlignment="Top" Click="startbtn_Click" Width="120" Height="40" FontSize="20"/>
-        <Button x:Name="stopbtn" Content="Stop" HorizontalAlignment="Center" Margin="0,357,0,0" VerticalAlignment="Top" Click="stopbtn_Click" Height="40" Width="120" FontSize="20"/>
-        <Button x:Name="resetbtn" Content="Reset" Margin="0,356,133,0" VerticalAlignment="Top" Click="resetbtn_Click"  Height="40" Width="120" FontSize="20" HorizontalAlignment="Right" />
 
     </Grid>
 </Window>
