@@ -1,0 +1,24 @@
+﻿<Window x:Class="Menu.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Menu"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid Background="Black">
+        <RibbonMenuButton Foreground="{x:Null}" HorizontalAlignment="Center" VerticalAlignment="Center" IsDropDownOpen="True" >
+            <RibbonMenuButton.SmallImageSource>
+                <DrawingImage xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+                    <DrawingImage.Drawing>
+                        <GeometryDrawing x:Name="hamburgermenu" Brush="White" Geometry="M3,6H21V8H3V6M3,11H21V13H3V11M3,16H21V18H3V16Z" />
+                    </DrawingImage.Drawing>
+                </DrawingImage>
+            </RibbonMenuButton.SmallImageSource>
+            <Button Content="teste 1" VerticalAlignment="Stretch"/>
+            <Button Content="teste2"/>
+            <Button Content="teste3"/>
+        </RibbonMenuButton>
+
+    </Grid>
+</Window>
